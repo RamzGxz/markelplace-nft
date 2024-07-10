@@ -13,3 +13,7 @@
   background-color: #392b74;
   border-radius: 8px;
 }
+
+html, body, *{
+  scroll-behavior: smooth;
+}

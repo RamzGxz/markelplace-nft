@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import BidsCard from '../cards/bidCards';
-import { CaretLeft, CaretRight } from '@phosphor-icons/react/dist/ssr';
 
 const TrendingCategories = () => {
-   // Autoplay interval in milliseconds
+  // Autoplay interval in milliseconds
   const cards = [
     { bidPrice: 0.25, desc: 'Current Bids', title: 'Monkey Banana', price: 1.65, likes: 120 },
     { bidPrice: 0.25, desc: 'Current Bids', title: 'Elephant Apple', price: 2.15, likes: 95 },
@@ -13,11 +12,12 @@ const TrendingCategories = () => {
 
 
   return (
-    <div className="w-full flex flex-col gap-16 py-16">
+    <div className="w-full flex flex-col gap-16 py-16" id='trending'>
       <h1 className='text-center text-5xl font-semibold'>
-        Trending <span className='text-accent font-black'>NFTs</span>
+        Trending <span className='bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent font-black'>NFTs</span>
       </h1>
-      <div className='w-full grid grid-cols-4 gap-5'>
+
+      <div className='w-full grid lg:grid-cols-4 grid-cols-2 gap-5'>
         {cards.map((card, index) => (
           <BidsCard
             key={index}
