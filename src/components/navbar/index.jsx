@@ -4,7 +4,7 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className='w-full flex justify-between items-center py-5 sticky top-0 left-0 z-50 backdrop-blur-sm'>
+    <div className='w-full flex justify-between items-center py-5 sticky top-0 left-0  backdrop-blur-sm'>
       <div className='flex items-center gap-2'>
         <img src="/logo.png" alt="" width={35} height={35} />
         <h1 className='text-2xl font-semibold'>NFT</h1>

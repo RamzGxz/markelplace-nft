@@ -12,11 +12,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="bg-background text-text bg-[url('/bg.png')] bg-top bg-cover bg-no-repeat">
-      <div className="w-full backdrop-blur-sm sticky top-0 left-0 ">
-        <div className="max-w-screen-xl mx-auto w-full"><Navbar /></div>
+    <div className=" bg-[url('/bg.png')] bg-top bg-no-repeat">
+      <div className="w-full backdrop-blur-sm sticky top-0 left-0 z-50 ">
+        <div className="max-w-screen-xl mx-auto w-full">
+          <Navbar />
+        </div>
       </div>
-      <div className={`w-full max-w-screen-xl mx-auto flex flex-col gap-16 ${inter.className}`}>
+      <div className={`w-full max-w-screen-xl mx-auto flex flex-col gap-16 ${inter.className} -z-10`}>
         <Hero />
         <HotNft />
         <Collections />

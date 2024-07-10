@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <title>NFT Marketplace</title>
       </Head>
-      <body>
+      <body className="bg-background text-text">
         <Main />
         <NextScript />
       </body>
