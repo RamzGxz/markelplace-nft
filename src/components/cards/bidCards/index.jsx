@@ -6,7 +6,7 @@ const BidsCard = ({ image, title, desc, price, bidPrice, likes }) => {
 
   return (
     <div className='w-full p-5 rounded-md bg-primary/5 flex flex-col gap-5 group cursor-pointer relative'>
-      <div className='w-full lg:h-44 h-40 bg-gradient-to-r from-secondary to-accent rounded-md transform transition-transform duration-300 group-hover:scale-105 -z-0'></div>
+      <div className='w-full lg:h-44 h-36 bg-gradient-to-r from-secondary to-accent rounded-md transform transition-transform duration-300 group-hover:scale-105 -z-0'></div>
       <div className='flex flex-col gap-2'>
         <div className='flex justify-between w-full'>
           <p className='transition-colors duration-300 group-hover:text-accent lg:text-sm'>{title}</p>

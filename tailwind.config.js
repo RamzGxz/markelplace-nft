@@ -14,6 +14,9 @@ module.exports = {
         'secondary': '#392b74',
         'accent': '#764ebe',
       },
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
+      }
     },
   },
   plugins: [],
