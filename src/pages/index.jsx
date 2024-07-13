@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from 'next/head'
 
 import Hero from "@/components/hero";
 import HotNft from "@/components/hotNft";
@@ -9,6 +10,9 @@ import Tutorials from "@/components/tutorials";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>NFT Marketplace</title>
+      </Head>
       <Hero />
       <HotNft />
       <Collections />

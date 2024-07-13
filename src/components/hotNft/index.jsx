@@ -34,13 +34,12 @@ const HotNft = () => {
 
   useEffect(() => {
     fetchData()
-    console.log(data)
   }, [])
 
   return (
     <div className="w-full flex flex-col gap-16 py-16" id='bids'>
-      <h1 className='text-center text-5xl font-semibold'>Hot Bids</h1>
-      <div className='w-full grid lg:grid-cols-4 grid-cols-2 gap-5'>
+      <h1 className='text-center text-5xl font-semibold'>Best NFTs of <span className='bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent font-black'>Times</span></h1>
+      <div className={`w-full grid ${data.length > 3 ? 'lg:grid-cols-4 gap-5': 'lg:grid-cols-3 gap-10'} grid-cols-2 `}>
         {data ? (
           data.map((item, index) => {
             return (

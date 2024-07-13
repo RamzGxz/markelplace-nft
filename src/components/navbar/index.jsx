@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
         <div className='lg:inline-flex hidden gap-5'>
           <Link href="/" className='font-medium hover:text-primary transition-all duration-300'>Home</Link>
-          <Link href="#bids" className='font-medium hover:text-primary transition-all duration-300'>Hot Bids</Link>
+          <Link href="#bids" className='font-medium hover:text-primary transition-all duration-300'>Best NFTs</Link>
           <Link href="#explore" className='font-medium hover:text-primary transition-all duration-300'>Explore</Link>
           <Link href="#trending" className='font-medium hover:text-primary transition-all duration-300'>Trending</Link>
           <Link href="#tutorials" className='font-medium hover:text-primary transition-all duration-300'>Tutorials</Link>
@@ -109,7 +109,7 @@ const Navbar = () => {
       <div className={`w-full ${nav ? 'h-screen opacity-100' : 'h-0 opacity-0'}  absolute backdrop-blur-lg bg-background p-6 top-14 left-0 transition-all duration-300`}>
         <div className={`inline-flex flex-col lg:hidden gap-5 ${nav ? 'opacity-100' : 'opacity-0'}`} onClick={() => setNav(!nav)}>
           <Link href="/" className='font-medium hover:text-primary transition-all duration-300'>Home</Link>
-          <Link href="#bids" className='font-medium hover:text-primary transition-all duration-300'>Hot Bids</Link>
+          <Link href="#bids" className='font-medium hover:text-primary transition-all duration-300'>Best NFTs</Link>
           <Link href="#explore" className='font-medium hover:text-primary transition-all duration-300'>Explore</Link>
           <Link href="#trending" className='font-medium hover:text-primary transition-all duration-300'>Trending</Link>
           <Link href="#tutorials" className='font-medium hover:text-primary transition-all duration-300'>Tutorials</Link>

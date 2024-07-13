@@ -18,7 +18,7 @@ const BidsCard = ({ tick, amount, unitPrice, inscriptionNumber, price }) => {
       <div className='w-full lg:h-44 h-36 bg-gradient-to-r from-background via-secondary/15 rounded-md to-background  transform transition-transform duration-300 -z-0 flex justify-center items-center flex-col gap-3'>
         <h1 className='text-4xl font-bold'>{numberFormat(amount)}</h1>
         <div className='flex flex-col gap-1'>
-          <p className='text-xs'><span className='text-2xl font-bold text-accent'>{unitPrice}</span> sats/{tick}</p>
+          <p className='text-xs'><span className='text-lg font-bold text-accent'>{unitPrice}</span>sats/{tick}</p>
           <p className='italic text-xs text-center'>$0.0287</p>
         </div>
       </div>

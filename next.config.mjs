@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  env:{
+  env: {
     UNISAT_API_KEY: process.env.UNISAT_API_KEY
-  }
+  },
+  images: { remotePatterns: [{ hostname: 'next-cdn.unisat.io', protocol: 'https' }] }
 };
 
 export default nextConfig;
