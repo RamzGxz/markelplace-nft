@@ -16,10 +16,10 @@ const BidsCard = ({ tick, amount, unitPrice, inscriptionNumber, price }) => {
   return (
     <div className='w-full border border-secondary/40 p-1 rounded-md bg-primary/5 flex flex-col gap-5 group cursor-pointer relative'>
       <div className='w-full lg:h-44 h-36 bg-gradient-to-r from-background via-secondary/15 rounded-md to-background  transform transition-transform duration-300 -z-0 flex justify-center items-center flex-col gap-3'>
-        <h1 className='text-4xl font-bold'>{numberFormat(amount)}</h1>
+        <h1 className='lg:text-4xl text-2xl font-bold'>{numberFormat(amount)}</h1>
         <div className='flex flex-col gap-1'>
           <p className='text-xs'><span className='text-lg font-bold text-accent'>{unitPrice}</span>sats/{tick}</p>
-          <p className='italic text-xs text-center'>$0.0287</p>
+          <p className='italic text-xs text-center'>{tick === 'DBIX' ? '$0.0287': tick === 'ordi' ? '$35.82': tick === 'meme' ? '$26.15': ''}</p>
         </div>
       </div>
       <div className='absolute top-1 left-1 p-1 px-2 text-xs bg-secondary rounded-md'>{tick}</div>
