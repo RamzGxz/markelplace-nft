@@ -24,7 +24,7 @@ const DetailProduk = () => {
   }
 
   return (
-    <div className="w-full flex justify-between items-center py-5 sticky top-0 left-0 mt-7">
+    <div className="w-full flex justify-between items-center py-5 sticky top-0 left-0 mt-7 overflow-hidden">
       <div className="flex justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-start">
           <div className="relative lg:w-[570px] flex justify-center">
@@ -39,7 +39,7 @@ const DetailProduk = () => {
             />
           </div>
 
-          <div className="mt-8 flex flex-col gap-2">
+          <div className="mt-5 mx-0 md:mx-0 flex flex-col gap-2">
             <h1 className="text-4xl font-bold">Degen Ape #7988</h1>
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 items-start">
               <div className="flex gap-1 items-center justify-start">
@@ -57,11 +57,11 @@ const DetailProduk = () => {
               <Heart size={40} className="cursor-pointer" />
               <p>100</p>
             </div>
-            <div className="bg-[#392B74]/15 rounded-[6px] w-[640px]">
+            <div className="bg-[#392B74]/15 rounded-[6px] lg:w-[640px] mt-2">
               <div className="p-3 flex flex-col items-start gap-2">
                 <div className="flex justify-between w-full items-center">
                   <h1 className="text-[20px]">Price</h1>
-                  <div className="flex gap-6 border border-[#392B74] rounded p-1">
+                  <div className="flex gap-3 lg:gap-6 border border-[#392B74] rounded p-1">
                     <button onClick={decreaseQuantity} className="p-1">
                       <Minus size={20} />
                     </button>
@@ -81,39 +81,30 @@ const DetailProduk = () => {
                 </button>
               </div>
             </div>
-            <div
-              className="cursor-pointer w-[640px]"
-              onClick={toggleDescription}
-            >
-              <div className="p-3 py-2 bg-[#392B74]/60 rounded-t-[6px] flex justify-between items-center gap-[500px]">
+            
+            <div className="cursor-pointer lg:w-[640px]" onClick={toggleDescription}>
+              <div className="p-3 py-2 bg-[#392B74]/60 rounded-t-[6px] flex items-center justify-between">
                 <h1>Description</h1>
-                <button
-                  onClick={toggleDescription}
-                  className="flex items-center"
-                >
+                <button onClick={toggleDescription} className="flex items-between">
                   <CaretUp
                     size={26}
                     className={`transition transform rotate-180 ${
-                      isDescriptionVisible
-                        ? `transition transform rotate-0`
-                        : ""
+                      isDescriptionVisible ? `transition transform rotate-0` : ""
                     }`}
                   />
                 </button>
               </div>
               {isDescriptionVisible && (
                 <div className="p-3 bg-[#392B74]/15 rounded-b-[6px]">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Molestiae illum impedit sit. Esse voluptatem quaerat saepe.
-                    Consequuntur natus est atque earum, quidem quos voluptatum
-                    beatae in repudiandae hic explicabo fuga!
-                  </p>
+                  <div className="flex flex-col gap-5">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum natus nihil ea dolores? Neque praesentium dolorum similique non! Dolorum officiis eos voluptas fugiat quo harum dolor. Saepe, praesentium eligendi! Porro.</p>
+                  </div>
                 </div>
               )}
             </div>
+            
             <div className="cursor-pointer lg:w-[640px]" onClick={toogleDetail}>
-              <div className="p-3 py-2 bg-[#392B74]/60 rounded-t-[6px] flex items-center justify-between gap-[500px]">
+              <div className="p-3 py-2 bg-[#392B74]/60 rounded-t-[6px] flex items-center justify-between">
                 <h1>Detail</h1>
                 <button onClick={toogleDetail} className="flex items-between">
                   <CaretUp
@@ -150,7 +141,7 @@ const DetailProduk = () => {
               )}
             </div>
           </div>
-          <div className="cursor-pointer lg:w-[80rem] mt-20" onClick={toogleActivity}>
+          <div className="cursor-pointer w-[19.4rem] md:w-[45rem] lg:w-[79.5rem] mt-20" onClick={toogleActivity}>
               <div className="p-3 py-2 bg-[#392B74]/60 rounded-t-[6px] flex items-center justify-between gap-[100px]">
                 <div className="flex items-center">
                     <Pulse size={20}/>
@@ -170,30 +161,30 @@ const DetailProduk = () => {
                     <table className="w-full">
                         <thead>
                             <tr className="">
-                                <th className="px-28 py-5 text-left">Type</th>
-                                <th className="px-28 py-5 text-left">Price</th>
-                                <th className="px-28 py-5 text-left">Date</th>
-                                <th className="px-28 py-5 text-left">Transaction</th>
+                                <th className="px-12 lg:px-28 py-5 text-left">Type</th>
+                                <th className="px-12 lg:px-28 py-5 text-left">Price</th>
+                                <th className="px-12 lg:px-28 py-5 text-left">Date</th>
+                                <th className="px-12 lg:px-28 py-5 text-left">Transaction</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr className="hover:bg-[#392B74]/10">
-                                <td className="px-28 py-5">Sale</td>
-                                <td className="px-28 py-5">0.844 ETH </td>
-                                <td className="px-28 py-5">3 years ago</td>
-                                <td className="px-28 py-5">53H5...d6az</td>
+                                <td className="px-12 lg:px-28 py-5">Sale</td>
+                                <td className="px-12 lg:px-28 py-5">0.844 ETH </td>
+                                <td className="px-12 lg:px-28 py-5">3 years ago</td>
+                                <td className="px-12 lg:px-28 py-5">53H5...d6az</td>
                             </tr>
                             <tr className="hover:bg-[#392B74]/10">
-                                <td className="px-28 py-5">Sale</td>
-                                <td className="px-28 py-5">0.844 ETH </td>
-                                <td className="px-28 py-5">3 years ago</td>
-                                <td className="px-28 py-5">53H5...d6az</td>
+                                <td className="px-12 lg:px-28 py-5">Sale</td>
+                                <td className="px-12 lg:px-28 py-5">0.844 ETH </td>
+                                <td className="px-12 lg:px-28 py-5">3 years ago</td>
+                                <td className="px-12 lg:px-28 py-5">53H5...d6az</td>
                             </tr>
                             <tr className="hover:bg-[#392B74]/10">
-                                <td className="px-28 py-5">Sale</td>
-                                <td className="px-28 py-5">0.844 ETH </td>
-                                <td className="px-28 py-5">3 years ago</td>
-                                <td className="px-28 py-5">53H5...d6az</td>
+                                <td className="px-12 lg:px-28 py-5">Sale</td>
+                                <td className="px-12 lg:px-28 py-5">0.844 ETH </td>
+                                <td className="px-12 lg:px-28 py-5">3 years ago</td>
+                                <td className="px-12 lg:px-28 py-5">53H5...d6az</td>
                             </tr>
                         </tbody>
                     </table>
